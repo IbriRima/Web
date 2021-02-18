@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Atelier Bonus
+    </title>
+  
+</head>
+<body>
+<h3>
+    Exercice 2
+</h3>
+
+<script>
+  
+    function makeNewString()
+    {
+     if(document.Questions.New.value.length<3)
+     {
+         alert("La nouvelle chaine est : "+document.Questions.New.value);
+     } 
+     else 
+     {
+      var ch1=(document.Questions.New.value.substring(0,3)+document.Questions.New.value.substring(document.Questions.New.value.length-3,document.Questions.New.value.length)); 
+     alert("La nouvelle chaine est : "+ch1);
+
+     }
+    }
+    
+    function firstHalf()
+    {
+        alert(document.getElementById("Half").value.substring(0,document.getElementById("Half").value.length/2));
+     
+    }
+  
+    function concatinate()
+    {
+        var newch=document.getElementById("ch1").value.substring(1,document.getElementById("ch1").value.length)+document.getElementById("ch2").value.substring(1,document.getElementById("ch2").value.length); 
+   alert ("Voici la nouvelle chaine: "+newch); 
+    }
+ 
+    function closestTo100()
+    { 
+  
+        if(100-(parseInt(document.getElementById("num1").value))<100-(parseInt(document.getElementById("num2").value)))
+        { alert ("Le nombre le plus proche de 100 est: "+document.getElementById("num1").value); 
+        }
+    else {
+        alert ("Le nombre le plus proche de 100 est: "+document.getElementById("num2").value);
+         }
+    
+
+    }
+
+  function contains2To4()
+  {
+
+
+  }
+
+ 
+  function Add()
+  {
+    document.write(parseInt(document.getElementById("n1").value)+parseInt(document.getElementById("n2").value));
+  }
+
+  function hailstone()
+  {
+      var n=parseInt(document.getElementById("num").value); 
+      while(n!=1)
+      {
+      if(n%2==0)
+  {
+n=n/2; 
+alert("La nouvelle valeur= "+n); 
+  }
+  else{
+      n=n*3+1;
+    alert("La nouvelle valeur= "+n)}
+      }     
+
+  }
+   </script>
+    
+    <form name="Questions" action="Exercice2.html" >
+        <h5>
+            1.
+        </h5>
+        <label for="New" >Entrer une chaine de caractère pour former une autre:</label>
+         <input type="text" id="New" name="New">
+        <input type= button name='Entrer' value="Entrer" onClick="makeNewString()" />
+<br>
+<br>
+<h5>
+    2.
+</h5>
+        <label for="Half" >Entrer une chaine de caractère pour avoir sa moitiée:</label>
+         <input type="text" id="Half" name="Half"  >
+        <input type= button name='Entrer2' value="Entrer" onClick="firstHalf()" />
+    
+
+<br>
+<h5>
+    3.
+</h5>
+
+        <label for="ch1" >Entrer la 1° chaine de caractère: </label>
+         <input type="text" id="ch1" name="ch1" >
+         <br>
+         <label for="ch2" >Entrer la 2° chaine de caractère: </label>
+         <input type="text" id="ch2" name="ch2" >
+         <br>
+        <input type= button name='Entrer' value="Entrer" onClick="concatinate()" />
+     
+      <br> 
+<h5>
+    4.
+</h5>
+<label for="num1" >Entrer le 1° nombre: </label>
+         <input type="number" id="num1" name="num1" >
+         <br>
+         <label for="num2" >Entrer le 2° nombre: </label>
+       
+         <input type="number" id="num2" name="num2" >
+         <br>
+         <input type= button name='Entrer' value="Entrer" onClick="closestTo100()" />
+
+    <br> 
+    <h5>
+    5. 
+    </h5>
+    <label for="Occ" >Entrer la chaine de caractère: </label>
+    <input type="text" id="Occ" name="Occ" >
+    <input type= button name='Entrer' value="Entrer" onClick="contains2To4()" />
+
+    <h5>
+        6.
+    </h5>
+    <label for="n1" >Entrer le 1° nombre: </label>
+             <input type="number" id="n1" name="n1" >
+             <br>
+             <label for="n2" >Entrer le 2° nombre: </label>
+           
+             <input type="number" id="n2" name="n2" >
+             <br>
+             <input type= button name='Entrer' value="Entrer" onClick="Add()" />
+
+             <h5>
+                7.
+            </h5>
+            <label for="num" >Entrer le 1° nombre: </label>
+                     <input type="number" id="num" name="num" >
+                     
+                     <input type= button name='Entrer' value="Entrer" onClick="hailstone()" />
+           
+    </form>
+        </body>
+    </html>
+    
